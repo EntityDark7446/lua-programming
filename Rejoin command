@@ -1,0 +1,12 @@
+local Command = "!rejoin"
+local Service = game:GetService("TeleportService")
+local PlaceId = ["YOUR ROBLOX GAME ID HERE"]
+
+game.Players.PlayerAdded:Connect(function(v)
+	v.Chatted:Connect(function(msg)
+		if msg == Command then
+			wait(1.5)
+			Service:Teleport(PlaceId, v)
+		end
+	end)
+end)
