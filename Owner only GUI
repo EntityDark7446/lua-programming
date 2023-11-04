@@ -1,0 +1,9 @@
+local SG = game:GetService("StarterGui")
+
+game.Players.PlayerAdded:Connect(function(player)
+	if player.Name == "YOUR ROBLOX USERNAME HERE" then
+		SG.Highlight.TextButton.Visible = true
+	else
+		SG.Highlight.TextButton.Visible = false
+	end
+end)
